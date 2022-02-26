@@ -312,13 +312,13 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
                 key: "setDarkTheme",
                 value: function(e) {
                     var a = document.querySelector("body");
-                    e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.remove("nightmode"), this.isDarkTheme = e, window.localStorage.setItem(`${APP_NAME}.x``, JSON.stringify(e))
+                    e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.remove("nightmode"), this.isDarkTheme = e, window.localStorage.setItem(`${APP_NAME}.x`, JSON.stringify(e))
                 }
             }, {
                 key: "setColorBlindTheme",
                 value: function(e) {
                     var a = document.querySelector("body");
-                    e && !a.classList.contains("colorblind") ? a.classList.add("colorblind") : a.classList.remove("colorblind"), this.isColorBlindTheme = e, window.localStorage.setItem(`${APP_NAME}.z``, JSON.stringify(e))
+                    e && !a.classList.contains("colorblind") ? a.classList.add("colorblind") : a.classList.remove("colorblind"), this.isColorBlindTheme = e, window.localStorage.setItem(`${APP_NAME}.z`, JSON.stringify(e))
                 }
             }, {
                 key: "setFancyFont",
