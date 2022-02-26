@@ -1,6 +1,8 @@
 this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
     "use strict";
 
+    const APP_NAME = 'NERDLE';
+
     function a(e) {
         return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
             return typeof e
@@ -300,29 +302,29 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
                 s(this, t), n(p(e = a.call(this)), "isDarkTheme", !1), n(p(e), "isColorBlindTheme", !1), n(p(e), "isFancyFont", !1), e.attachShadow({
                     mode: "open"
                 });
-                var o = JSON.parse(window.localStorage.getItem(x)),
+                var o = JSON.parse(window.localStorage.getItem(`${APP_NAME}.x`)),
                     r = window.matchMedia("(prefers-color-scheme: dark)").matches,
-                    i = JSON.parse(window.localStorage.getItem(z)),
-                    l = JSON.parse(window.localStorage.getItem(j));
+                    i = JSON.parse(window.localStorage.getItem(`${APP_NAME}.z`)),
+                    l = JSON.parse(window.localStorage.getItem(`${APP_NAME}.j`));
                 return !0 === o || !1 === o ? e.setDarkTheme(o) : r && e.setDarkTheme(!0), !0 !== i && !1 !== i || e.setColorBlindTheme(i), !0 === l || !1 === l ? e.setFancyFont(l) : r && e.setFancyFont(!1), e
             }
             return o(t, [{
                 key: "setDarkTheme",
                 value: function(e) {
                     var a = document.querySelector("body");
-                    e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.remove("nightmode"), this.isDarkTheme = e, window.localStorage.setItem(x, JSON.stringify(e))
+                    e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.remove("nightmode"), this.isDarkTheme = e, window.localStorage.setItem(`${APP_NAME}.x``, JSON.stringify(e))
                 }
             }, {
                 key: "setColorBlindTheme",
                 value: function(e) {
                     var a = document.querySelector("body");
-                    e && !a.classList.contains("colorblind") ? a.classList.add("colorblind") : a.classList.remove("colorblind"), this.isColorBlindTheme = e, window.localStorage.setItem(z, JSON.stringify(e))
+                    e && !a.classList.contains("colorblind") ? a.classList.add("colorblind") : a.classList.remove("colorblind"), this.isColorBlindTheme = e, window.localStorage.setItem(`${APP_NAME}.z``, JSON.stringify(e))
                 }
             }, {
                 key: "setFancyFont",
                 value: function(e) {
                     var a = document.querySelector("body");
-                    e && !a.classList.contains("fancyfont") ? a.classList.add("fancyfont") : a.classList.remove("fancyfont"), this.isFancyFont = e, window.localStorage.setItem(j, JSON.stringify(e))
+                    e && !a.classList.contains("fancyfont") ? a.classList.add("fancyfont") : a.classList.remove("fancyfont"), this.isFancyFont = e, window.localStorage.setItem(`${APP_NAME}.j`, JSON.stringify(e))
                 }
             }, {
                 key: "connectedCallback",
@@ -823,14 +825,14 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
         };
 
     function ma() {
-        var e = window.localStorage.getItem(ca) || JSON.stringify(pa);
+        var e = window.localStorage.getItem(`${APP_NAME}.ca`) || JSON.stringify(pa);
         return JSON.parse(e)
     }
 
     function ha(e) {
         var a = ma();
         ! function(e) {
-            window.localStorage.setItem(ca, JSON.stringify(e))
+            window.localStorage.setItem(`${APP_NAME}.ca`, JSON.stringify(e))
         }(ua(a, e))
     }
     var ya = document.createElement("template");
@@ -977,7 +979,7 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
         };
 
     function Ra() {
-        var e = window.localStorage.getItem(Ia) || JSON.stringify(Oa);
+        var e = window.localStorage.getItem(`${APP_NAME}.Ia`) || JSON.stringify(Oa);
         return JSON.parse(e)
     }
 
@@ -1018,7 +1020,7 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
                 return t !== Ma ? e += t * o : e
             }, 0) / o.gamesWon),
             function(e) {
-                window.localStorage.setItem(Ia, JSON.stringify(e))
+                window.localStorage.setItem(`${APP_NAME}.Ia`, JSON.stringify(e))
             }(o)
     }
     var $a = document.createElement("template");
@@ -1635,8 +1637,8 @@ this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
                                     t = e.rowIndex,
                                     o = e.isHardMode,
                                     n = e.isWin,
-                                    r = JSON.parse(window.localStorage.getItem(x)),
-                                    i = JSON.parse(window.localStorage.getItem(z)),
+                                    r = JSON.parse(window.localStorage.getItem(`${APP_NAME}.x`)),
+                                    i = JSON.parse(window.localStorage.getItem(`${APP_NAME}.z`)),
                                     l = "Chem Nerdle ".concat(s);
                                 l += " ".concat(n ? t : "X", "/").concat(6), o && (l += "*");
                                 var d = "";
