@@ -1,4 +1,4 @@
-this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
+this.nerdle = this.nerdle || {}, this.nerdle.bundle = function(e) {
     "use strict";
 
     function a(e) {
@@ -849,7 +849,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
             key: "connectedCallback",
             value: function() {
                 var e, a = this;
-                this.shadowRoot.appendChild(ya.content.cloneNode(!0)), this.shadowRoot.querySelector("#hash").textContent = null === (e = window.wordle) || void 0 === e ? void 0 : e.hash, this.shadowRoot.querySelector("#puzzle-number").textContent = "Chem Nerdle #".concat((this.gameApp.dayOffset - 205) % va.length), this.shadowRoot.addEventListener("game-switch-change", function(e) {
+                this.shadowRoot.appendChild(ya.content.cloneNode(!0)), this.shadowRoot.querySelector("#hash").textContent = null === (e = window.nerdle) || void 0 === e ? void 0 : e.hash, this.shadowRoot.querySelector("#puzzle-number").textContent = "Chem Nerdle #".concat((this.gameApp.dayOffset - 205) % va.length), this.shadowRoot.addEventListener("game-switch-change", function(e) {
                     e.stopPropagation();
                     var s = e.detail,
                         t = s.name,
